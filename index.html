@@ -13,7 +13,7 @@
 <br> <br>
 <button title="This is a toolTip" onclick="this.innerHTML='This is RANU MONDOL'">Hero ALOM</button>
 <br> <br>
-<button onclick="makeTomato()">make Tomato</button>
+<button class="ekta-class" onclick="makeTomato()">make Tomato</button>
 
 
 
@@ -23,18 +23,17 @@
 
 <button  id="make-blue">make Blue</button>
 
-
+<button class="ekta-class" id="make-purple">Make Purple</button>
 
     <script src="js/events.js"></script>
     <script>
-        const makeBlueButton = document.getElementById('make-blue');
-       makeBlueButton.onclick=makeBlue ;
+        // Option 03
+        const makePurpleButton= document.getElementById('make-purple');
 
-       function makeBlue()
-       {
-        document.body.style.backgroundColor='blue';
-       
-       }
+        makePurpleButton.onclick = function makePurple()
+        {
+            document.body.style.backgroundColor='purple';
+        }
     </script>
 </body>
 </html>
