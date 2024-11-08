@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Dom Events</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-<h1 onclick="console.log('Hudai click korchi')">Dom er ajke special Event</h1>
+<h1 onclick="console.log('Hudai click korchi'),document.body.style.backgroundColor='blue'">Dom er ajke special Event</h1>
 <button onclick="this.innerHTML='Hukka Huya Hero Alom'">Click Me</button> <br>
 <br> <br>
 <button title="This is a toolTip" onclick="this.innerHTML='This is RANU MONDOL'">Hero ALOM</button>
 <br> <br>
 <button onclick="console.log('Kuch nehi')">Kuch bhi</button>
+
+
+
+<button onclick="document.body.style.backgroundColor='Yellow'">Make Yellow</button>
+
+<button class="ekta-class" onclick="makeRed()">Make Red</button>
+
+
+
+
+
     <script src="js/events.js"></script>
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor='red';
+        }
+    </script>
 </body>
 </html>
