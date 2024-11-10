@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dom Summary</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 class="handler-status">Default Text</h3>
+    <button  class="handler-status" onclick="handleOnClick()">Handle Event By Add On Click Function</button>
+    <script src="js/events2.js"></script>
+    <script>
+        function handleOnClick()
+        {
+           const handlerStatus=document.getElementsByClassName('handler-status');
+           handlerStatus[0].innerHTML='Handled By Function';
+           handlerStatus[1].innerHTML='Handled By Function';
+        }
+    </script>
+</body>
+</html>
