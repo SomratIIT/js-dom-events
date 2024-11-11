@@ -7,16 +7,37 @@
 </head>
 <body>
     <h1>Final DOM Event Handlers</h1>
-    <h3 class="handler-status">Default Text</h3>
-    <button  class="handler-status" onclick="handleOnClick()">Handle Event By Add On Click Function</button>
+    <h3 id="handler-status">Default Text</h3>
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-field" type="text">
+     <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOnClick()">Handle Event By Add On Click Function</button>
+    <button id="event-listener">Handle Event By Evnet Listener Function</button>
+ 
     <script src="js/events2.js"></script>
     <script>
         function handleOnClick()
         {
-           const handlerStatus=document.getElementsByClassName('handler-status');
-           handlerStatus[0].innerHTML='Handled By Function';
-           handlerStatus[1].innerHTML='Handled By Function';
+           const handlerStatus=document.getElementById('handler-status');
+           handlerStatus.innerText='Handled By Function By Onclick';
+           
         }
-    </script>
+        document.getElementById('event-listener').addEventListener('click',function(){
+        document.getElementById('handler-status').innerText='Handled By Function By Event Listener';
+        })
+
+        // Option 2 Recap
+document.getElementById('btn-update').addEventListener('click',function()
+{
+    const inputField = document.getElementById('input-field');
+    const inputText = inputField.value;
+
+    const p=document.getElementById('input-text-display');
+    p.innerText=inputText;
+    inputField.value='';
+})
+</script>
 </body>
 </html>

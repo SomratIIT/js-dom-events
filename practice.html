@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="my-secret">My secret Info</h1>
+    <input id="type-delete" type="text"placeholder='Please Type Delete'>
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        const mySecret= document.getElementById('my-secret');
+        const typeDelete = document.getElementById('type-delete');
+        const deleteBtn = document.getElementById('delete-btn');
+typeDelete.addEventListener('input',function()
+{
+    if(typeDelete.value==='Delete')
+{
+    deleteBtn.disabled = false;
+}
+else{
+    deleteBtn.disabled = true;
+}
+});
+deleteBtn.addEventListener('click',function()
+{
+    mySecret.style.display='none';
+
+    typeDelete.value='';
+    deleteBtn.disabled =true;
+})
+
+
+
+    </script>
+</body>
+</html>

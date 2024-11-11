@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+    <body>
+        <h1 id="secret-info">My Secret Info</h1>
+        <input id="input-box" type="text" placeholder="Please Type delete">
+        <button id="btn-delete" disabled>Delete</button>
+    
+        <script>
+            const inputBox = document.getElementById('input-box');
+            const deleteButton = document.getElementById('btn-delete');
+    
+            // Enable the button when "Delete" is typed
+            inputBox.addEventListener('input', function() {
+                if (inputBox.value === 'delete') {
+                    deleteButton.disabled = false; // Enable the button
+                } else {
+                    deleteButton.disabled = true; // Keep it disabled if the text doesn't match
+                }
+            });
+    
+            // Delete button click event
+            deleteButton.addEventListener('click', function() {
+                const secret = document.getElementById('secret-info');
+                secret.style.display = 'none'; // Hide the secret info
+                inputBox.value = ''; // Clear the text box
+                deleteButton.disabled = true; // Disable the button again
+            });
+        </script>
+    </body>
+    
+</html>
